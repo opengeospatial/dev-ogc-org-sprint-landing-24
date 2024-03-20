@@ -184,9 +184,8 @@ html(lang='en')
                             button.active(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
                             button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='1' aria-label='Slide 2')
                             button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='2' aria-label='Slide 3')
-                            //- button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='3' aria-label='Slide 4')
-                            //- button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='4' aria-label='Slide 5')
-                            //- button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='5' aria-label='Slide 6')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='3' aria-label='Slide 4')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='4' aria-label='Slide 5')
 
                         .carousel-inner
                             .carousel-item.active
@@ -216,180 +215,181 @@ html(lang='en')
                 .text-center
                     h2.section-heading.text-uppercase FAQ
                     .container
-                    .row.row-cols-2
-                        .col
-                            h2 General
-                            #accordion.accordion
-                                .accordion-item
-                                    h2#one.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-one' aria-expanded='false' aria-controls='collapse-one')
-                                            | What is a code sprint?
-                                    #collapse-one.accordion-collapse.collapse(aria-labelledby='one' data-bs-parent='#accordion')
-                                        .accordion-body
-                                            p A Code Sprint is a three day virtual or hybrid event, where dozens of developers from around the world come together to code and share their ideas regarding sharing geospatial information. This code sprint will be hybrid.
-                                .accordion-item
-                                    h2#two.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-two' aria-expanded='false' aria-controls='collapse-two')
-                                            | When is the code sprint?
-                                    #collapse-two.accordion-collapse.collapse(aria-labelledby='two' data-bs-parent='#accordion')
-                                        .accordion-body
-                                            p The code sprint will be a 3 day event from #{date}!. The welcome webinar will be held on October, 12.
-                                .accordion-item
-                                    h2#two.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-two' aria-expanded='false' aria-controls='collapse-two')
-                                            | Where is the code sprint?
-                                    #collapse-two.accordion-collapse.collapse(aria-labelledby='two' data-bs-parent='#accordion')
-                                        .accordion-body
-                                            p This code sprint will take place at 
-                                                a(href=`${location_link}`) #{location}
-                                                | and at the OGC events discord server.
+                        .row.row-cols-2
+                            .col
+                                h2 General
+                                #accordion.accordion
+                                    .accordion-item
+                                        h2#one.accordion-header
+                                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-one' aria-expanded='false' aria-controls='collapse-one')
+                                                | What is a code sprint?
+                                        #collapse-one.accordion-collapse.collapse(aria-labelledby='one' data-bs-parent='#accordion')
+                                            .accordion-body
+                                                p A Code Sprint is a three day virtual or hybrid event, where dozens of developers from around the world come together to code and share their ideas regarding sharing geospatial information. This code sprint will be hybrid.
+                                    .accordion-item
+                                        h2#two.accordion-header
+                                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-two' aria-expanded='false' aria-controls='collapse-two')
+                                                | When is the code sprint?
+                                        #collapse-two.accordion-collapse.collapse(aria-labelledby='two' data-bs-parent='#accordion')
+                                            .accordion-body
+                                                p The code sprint will be a 3 day event on #{date}.
+                                    .accordion-item
+                                        h2#three.accordion-header
+                                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-three' aria-expanded='false' aria-controls='collapse-three')
+                                                | Where is the code sprint?
+                                        #collapse-three.accordion-collapse.collapse(aria-labelledby='three' data-bs-parent='#accordion')
+                                            .accordion-body
+                                                p This code sprint will take place at 
+                                                    a(href=`${location_link}`) #{location}
+                                                    | and at the OGC events discord server.
+                                    .accordion-item
+                                        h2#four.accordion-header
+                                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-four' aria-expanded='false' aria-controls='collapse-four')
+                                                | What is the cost?
+                                        #collapse-four.accordion-collapse.collapse(aria-labelledby='four' data-bs-parent='#accordion')
+                                            .accordion-body
+                                                p Admission is free and includes mentors, workshops, $wag, resources, and a memorable experience!
+                                    .accordion-item
+                                        h2#five.accordion-header
+                                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-five' aria-expanded='false' aria-controls='collapse-five')
+                                                | Where is the schedule?
+                                        #collapse-five.accordion-collapse.collapse(aria-labelledby='five' data-bs-parent='#accordion')
+                                            .accordion-body
+                                                p You can find the updated schedule on 
+                                                    a(href=`${schedule_link}`) this
+                                                    | link.
+                                    .accordion-item
+                                        h2#six.accordion-header
+                                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-six' aria-expanded='false' aria-controls='collapse-six')
+                                                | But I don't know anything about standards nor I am an expert on geospatial!
+                                        #collapse-six.accordion-collapse.collapse(aria-labelledby='six' data-bs-parent='#accordion')
+                                            .accordion-body
+                                                p If you are a web developer, working or interested in working with location data this sprint 
+                                                    i is also for you. 
+                                                | You can take it as a starting point on a journey to use geospatial data in a more efficient manner. 
+                                                | Do not worry about the things you don't know yet - just bring your enthusiasm and your backend or frontend skills, and we will bring the rest!
+                                    .accordion-item
+                                        h2#seven.accordion-header
+                                            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-seven' aria-expanded='false' aria-controls='collapse-seven')
+                                                | I have more questions!
+                                        #collapse-seven.accordion-collapse.collapse(aria-labelledby='seven' data-bs-parent='#accordion')
+                                            .accordion-body
+                                                p Please email us at 
+                                                    a(href='mailto:devrel@ogc.org')
+                                                        i.fa.fa-envelope
+                                                    | if you have any questions or concerns!
 
-                                .accordion-item
-                                    h2#three.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-three' aria-expanded='false' aria-controls='collapse-three')
-                                            | What is the cost?
-                                    #collapse-three.accordion-collapse.collapse(aria-labelledby='three' data-bs-parent='#accordion')
-                                        .accordion-body
-                                            p Admission is free and includes mentors, workshops, $wag, resources, and a memorable experience!
-                                .accordion-item
-                                    h2#four.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-four' aria-expanded='false' aria-controls='collapse-four')
-                                            | Where is the schedule?
-                                    #collapse-four.accordion-collapse.collapse(aria-labelledby='four' data-bs-parent='#accordion')
-                                        .accordion-body
-                                            p You can find the updated schedule on 
-                                                a(href=`${schedule_link}`) this
-                                                | link.
-                                .accordion-item
-                                    h2#five.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-five' aria-expanded='false' aria-controls='collapse-five')
-                                            | But I don't know anything about standards nor am I an expert on geospatial!
-                                    #collapse-five.accordion-collapse.collapse(aria-labelledby='five' data-bs-parent='#accordion')
-                                        .accordion-body
-                                            p If you are a web developer, working or interested in working with location data this sprint 
-                                                i is also for you. 
-                                            | You can take it as a starting point on a journey to use geospatial data in a more efficient manner. 
-                                            | Do not worry about the things you don't know yet - just bring your enthusiasm and your backend or frontend skills, and we will bring the rest!
-                                .accordion-item
-                                    h2#six.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-six' aria-expanded='false' aria-controls='collapse-six')
-                                            | I have more questions!
-                                    #collapse-six.accordion-collapse.collapse(aria-labelledby='six' data-bs-parent='#accordion')
-                                        .accordion-body
-                                            p Please email us at 
-                                                a(href='mailto:standards-team@ogc.org')
-                                                    i.fa.fa-envelope
-                                                | if you have any questions or concerns!
+                            .col
+                                h2 Tracks
+                                #accordion1.accordion
+                                        .accordion-item
+                                            h2#seven_.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-seven_' aria-expanded='false' aria-controls='collapse-seven_')
+                                                    | What are the sprint tracks?
+                                            #collapse-seven_.accordion-collapse.collapse(aria-labelledby='seven_' data-bs-parent='#accordion1')
+                                                .accordion-body
+                                                    p The sprint includes two parallel tracks: the 
+                                                        i main track 
+                                                        | and the 
+                                                        i mentor stream
+                                                        | . 
+                                                    | On the main track, developers have the opportunity to contribute to the development of the standards, either by working on implementations of the standard or on the standard itself.
+                                                    | They will be working at their own pace, developing code or in other related activities such as testing, compliance, submitting issues or documentation. On the mentor stream, they will have the opportunity to learn more about the standards, and give their first steps in using them. The stream will include community led tutorials and access to mentoring.
+                                        .accordion-item
+                                            h2#eight.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-eight' aria-expanded='false' aria-controls='collapse-eight')
+                                                    | How can I find a mentor?
+                                            #collapse-eight.accordion-collapse.collapse(aria-labelledby='eight' data-bs-parent='#accordion1')
+                                                .accordion-body
+                                                    p Once the sprint starts, you can find a mentor in the 
+                                                        a(href="https://discord.gg/WGy3XCt5QB") #find-a-mentor 
+                                                        | channel, on the OGC-events discord server. 
 
-                        .col
-                           h2 Tracks
-                           #accordion1.accordion
-                                .accordion-item
-                                    h2#seven.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-seven' aria-expanded='false' aria-controls='collapse-seven')
-                                            | What are the sprint tracks?
-                                    #collapse-seven.accordion-collapse.collapse(aria-labelledby='seven' data-bs-parent='#accordion1')
-                                        .accordion-body
-                                            p The sprint includes two parallel tracks: the 
-                                                i main track 
-                                                | and the 
-                                                i mentor stream
-                                                | . 
-                                            | On the main track, developers have the opportunity to contribute to the development of the standards, either by working on implementations of the standard or on the standard itself.
-                                            | They will be working at their own pace, developing code or in other related activities such as testing, compliance, submitting issues or documentation. On the mentor stream, they will have the opportunity to learn more about the standards, and give their first steps in using them. The stream will include community led tutorials and access to mentoring.
-                                .accordion-item
-                                    h2#eight.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-eight' aria-expanded='false' aria-controls='collapse-eight')
-                                            | How can I find a mentor?
-                                    #collapse-eight.accordion-collapse.collapse(aria-labelledby='eight' data-bs-parent='#accordion1')
-                                        .accordion-body
-                                            p Once the sprint starts, you can find a mentor in the 
-                                                a(href="https://discord.gg/WGy3XCt5QB") #find-a-mentor 
-                                                | channel, on the OGC-events discord server. 
- 
-                        .col
-                           h2 Logistics
-                           #accordion2.accordion
-                                .accordion-item
-                                    h2#nine.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-nine' aria-expanded='false' aria-controls='collapse-nine')
-                                            | How does an hybrid code sprint work?
-                                    #collapse-nine.accordion-collapse.collapse(aria-labelledby='nine' data-bs-parent='#accordion2')
-                                        .accordion-body
-                                            p An hybrid code sprint takes place on a physical location. In this case, it will be in
-                                                a(href=`${location_link}`) #{location}.
-                                            p In addition, participants will be able to join online. This means that anyone in the world can join, provided they can follow the local timetable. 
-                                                | The online part of the code sprint runs on the 
-                                                i.fab.fa-discord  
-                                                | discord plattform, which provides both text and video/audio channels.
-                                            p During the code sprint, we will meet at given times, according to the 
-                                                a(href=`${schedule_link}`) schedule 
-                                                | and stream those meetings through discord.
-                                            p You can read more about the logistics and other details of the code sprint, on the
-                                                a(href=`${wiki_link}`) wiki page
-                                                | .
-                                .accordion-item
-                                    h2#nine-1.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-nine-1' aria-expanded='false' aria-controls='collapse-nine-1')
-                                            | Do you have any advice regarding accomodation during the code sprint?
-                                    #collapse-nine-1.accordion-collapse.collapse(aria-labelledby='nine-1' data-bs-parent='#accordion2')
-                                        .accordion-body
-                                            p Here is a list of recommended hotels:
-                                            ul 
-                                                li 
-                                                    a(href='https://maps.app.goo.gl/ZBmNgG9TRkJwjeoTA') Premier Inn London Farringdon (Smithfield) hotel
-                                                li
-                                                    a(href='https://maps.app.goo.gl/ifxPWtggXaUxuimWA') Hotel nhow London
-                                                li
-                                                    a(href='https://maps.app.goo.gl/fmE3FeByyBHfRmnS8') Marrable's Hotel (formerly The Zetter Hotel)
-                                .accordion-item
-                                    h2#nine-1.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-nine-1' aria-expanded='false' aria-controls='collapse-nine-1')
-                                            | I think I won't be able to attend all the sessions. Will you record them?
-                                    #collapse-nine-1.accordion-collapse.collapse(aria-labelledby='nine-1' data-bs-parent='#accordion2')
-                                        .accordion-body
-                                            p There will be audio and video recordings of some sessions, which will be available for registered participants. 
-                                .accordion-item
-                                    h2#nine-2.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-nine-2' aria-expanded='false' aria-controls='collapse-nine-1')
-                                            | Do I need to be at the code sprint 100% of the time?
-                                    #collapse-nine-2.accordion-collapse.collapse(aria-labelledby='nine-2' data-bs-parent='#accordion2')
-                                        .accordion-body
-                                            p We are empathetic towards the fact that people's schedules may not allow them to be at the code sprint 100% of the time, during the 3 days of the event.
-                                            | Just bear in mind, that in the case of sponsored code sprints you may need to demonstrate a minimum attendance, if you apply for funding.
-                                            | If the code sprint is not sponsored or you do not require funding, your attendance rate is completely up to you.                                                                             
+                            .col
+                                h2 Logistics
+                                #accordion2.accordion
+                                        .accordion-item
+                                            h2#nine.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-nine' aria-expanded='false' aria-controls='collapse-nine')
+                                                    | How does an hybrid code sprint work?
+                                            #collapse-nine.accordion-collapse.collapse(aria-labelledby='nine' data-bs-parent='#accordion2')
+                                                .accordion-body
+                                                    p An hybrid code sprint takes place on a physical location. In this case, it will be in
+                                                        a(href=`${location_link}`) #{location}.
+                                                    p In addition, participants will be able to join online. This means that anyone in the world can join, provided they can follow the local timetable. 
+                                                        | The online part of the code sprint runs on the 
+                                                        i.fab.fa-discord  
+                                                        | discord plattform, which provides both text and video/audio channels.
+                                                    p During the code sprint, we will meet at given times, according to the 
+                                                        a(href=`${schedule_link}`) schedule 
+                                                        | and stream those meetings through discord.
+                                                    p You can read more about the logistics and other details of the code sprint, on the
+                                                        a(href=`${wiki_link}`) wiki page
+                                                        | .
+                                        .accordion-item
+                                            h2#tenth.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-tenth' aria-expanded='false' aria-controls='collapse-nine-1')
+                                                    | Do you have any advice regarding accomodation during the code sprint?
+                                            #collapse-tenth.accordion-collapse.collapse(aria-labelledby='tenth' data-bs-parent='#accordion2')
+                                                .accordion-body
+                                                    p You can find
+                                                        a(href='https://github.com/opengeospatial/developer-events/wiki/2024-Joint-OGC-%E2%80%93-OSGeo-%E2%80%93-ASF-Code-Sprint#travel-info') here 
+                                                        | a list of nearby hotels. 
+                                        .accordion-item
+                                            h2#twelve.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-twelve' aria-expanded='false' aria-controls='collapse-nine-1')
+                                                    | I think I won't be able to attend all the sessions. Will you record them?
+                                            #collapse-twelve.accordion-collapse.collapse(aria-labelledby='twelve' data-bs-parent='#accordion2')
+                                                .accordion-body
+                                                    p There will be audio and video recordings of some sessions, which will be available for registered participants. 
+                                        .accordion-item
+                                            h2#thirteen.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-thirteen' aria-expanded='false' aria-controls='collapse-nine-1')
+                                                    | Do I need to be at the code sprint 100% of the time?
+                                            #collapse-thirteen.accordion-collapse.collapse(aria-labelledby='thirteen' data-bs-parent='#accordion2')
+                                                .accordion-body
+                                                    p We are empathetic towards the fact that people's schedules may not allow them to be at the code sprint 100% of the time, during the 3 days of the event.
+                                                    | Just bear in mind, that in the case of sponsored code sprints you may need to demonstrate a minimum attendance, if you apply for funding.
+                                                    | If the code sprint is not sponsored or you do not require funding, your attendance rate is completely up to you.                                                                             
+                                        .accordion-item
+                                            h2#nine-2.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-nine-2' aria-expanded='false' aria-controls='collapse-nine-1')
+                                                    | Do you issue a participation certificate?
+                                            #collapse-nine-2.accordion-collapse.collapse(aria-labelledby='nine-3' data-bs-parent='#accordion2')
+                                                .accordion-body
+                                                    p By request, OGC can issue a participation certificate to those attending the code sprint in-person.
+                                                    | You can see
+                                                    a(href='https://developer.ogc.org/sprints/23/assets/img/ogc_certificate.png') here 
+                                                    | an example of a participation certificate, where the name and organization were blurred out.
 
-                        .col
-                           h2 Registration
-                           #accordion3.accordion
-                                .accordion-item
-                                    h2#ten.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-ten' aria-expanded='false' aria-controls='collapse-ten')
-                                            | Can I attend?
-                                    #collapse-ten.accordion-collapse.collapse(aria-labelledby='ten' data-bs-parent='#accordion3')
-                                        .accordion-body
-                                            p Everyone is free to attend this code sprint. However, registration is mandatory and in-person participants should wait for confirmation of registration before arranging their travel.
-                                .accordion-item
-                                    h2#eleven.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-eleven' aria-expanded='false' aria-controls='collapse-eleven')
-                                            | When is registration?
-                                    #collapse-eleven.accordion-collapse.collapse(aria-labelledby='eleven' data-bs-parent='#accordion3')
-                                        .accordion-body
-                                            p Registration is open now. Registration for in-person participation closes at 05:00 PM BST on October 25th. Registration for remote participation will remain open throughout the code sprint. 
-                                            //- | Follow this
-                                            //-     a(href=`${registration_link}`) link
-                                            //-     | to register!
-                                .accordion-item
-                                    h2#eleven-1.accordion-header
-                                        button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-eleven-1' aria-expanded='false' aria-controls='collapse-eleven')
-                                            | Can I apply for funding?
-                                    #collapse-eleven-1.accordion-collapse.collapse(aria-labelledby='eleven-1' data-bs-parent='#accordion3')
-                                        .accordion-body
-                                            //- | Information about travel funding will be announced soon.
-                                            p Travel Support Funding is available for some participants. Participants interested in receiving travel support funding should indicate their interest on the registration form. 
-                                            //- | Participants looking to receive funding will have to submit their registration forms by August 14, 2022 and will be notified within 2 weeks of their application whether their application for travel support is approved or not.
-                                            //- | At this stage, we cannot guarantee that there will be funding available for this code sprint.
-                                            //- | However we recommend that participants interested in receiving travel support funding indicate their interest on the registration form. 
+                            .col
+                                h2 Registration
+                                #accordion3.accordion
+                                        .accordion-item
+                                            h2#ten.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-ten' aria-expanded='false' aria-controls='collapse-ten')
+                                                    | Can I attend?
+                                            #collapse-ten.accordion-collapse.collapse(aria-labelledby='ten' data-bs-parent='#accordion3')
+                                                .accordion-body
+                                                    p Everyone is free to attend this code sprint.
+                                        .accordion-item
+                                            h2#eleven.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-eleven' aria-expanded='false' aria-controls='collapse-eleven')
+                                                    | When is registration?
+                                            #collapse-eleven.accordion-collapse.collapse(aria-labelledby='eleven' data-bs-parent='#accordion3')
+                                                .accordion-body
+                                                    p Registration is open and closes on #{deadline}. Follow this
+                                                        a(href=`${registration_link}`) link
+                                                        | to register!
+                                        .accordion-item
+                                            h2#eleven-1.accordion-header
+                                                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-eleven-1' aria-expanded='false' aria-controls='collapse-eleven')
+                                                    | Can I apply for funding?
+                                            #collapse-eleven-1.accordion-collapse.collapse(aria-labelledby='eleven-1' data-bs-parent='#accordion3')
+                                                .accordion-body
+                                                    p At this stage, we cannot guarantee that there will be funding available for this code sprint. 
+                                                    | However we recommend that participants interested in receiving travel support funding indicate their interest on the registration form. 
+                                                    //- | Participants looking to receive funding will have to submit their registration forms by August 14, 2022 and will be notified within 2 weeks of their application whether their application for travel support is approved or not.
 
         // Contact
         section#contact.page-section
